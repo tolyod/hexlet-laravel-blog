@@ -23,6 +23,7 @@ Route::get('/', function () {
 Route::get('/about', function () use ($team) {
     return view('about', [ 'team' => $team ]);
 });
+
 Route::get('/articles', function () {
     return view('articles');
 });
