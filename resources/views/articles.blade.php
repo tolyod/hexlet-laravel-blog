@@ -1,2 +1,7 @@
-<h1>Статьи</h1>
+@extends('layouts.app')
 
+@section('header', 'Статьи')
+
+@section('content')
+    <p>Тут будут статьи</p>
+@endsection
