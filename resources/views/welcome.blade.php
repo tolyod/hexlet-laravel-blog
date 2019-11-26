@@ -7,8 +7,8 @@
     </head>
     <body>
         <!-- BEGIN (write your solution here) -->
-        <p><a href="/about">about</a></p>
-        <p><a href="/articles">articles</a></p>
+        <a href="/about">About</a>
+        <a href="/articles">Articles</a>
         <!-- END -->
     </body>
 </html>

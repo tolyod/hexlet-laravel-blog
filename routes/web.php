@@ -10,12 +10,18 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+$team = [
+    ['name' => 'Hodor', 'position' => 'programmer'],
+    ['name' => 'Joker', 'position' => 'CEO'],
+    ['name' => 'Elvis', 'position' => 'CTO'],
+];
 
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/about', function () {
-    return view('about');
+
+Route::get('/about', function () use ($team) {
+    return view('about', [ 'team' => $team ]);
 });
 Route::get('/articles', function () {
     return view('articles');
