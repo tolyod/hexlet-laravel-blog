@@ -25,6 +25,7 @@ Route::get('/about', function () use ($team) {
 });
 
 Route::get('/articles', function () {
-    return view('articles');
+    $artiles = \App\Article::all();
+    return view('articles', ['articles' => $artiles]);
 });
 
