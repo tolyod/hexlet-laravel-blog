@@ -8,7 +8,7 @@
     <body>
         <!-- BEGIN (write your solution here) -->
         <a href="/about">About</a>
-        <a href="/articles">Articles</a>
+        <a href="{{ route('articles.index', null, false) }}">Articles</a>
         <!-- END -->
     </body>
 </html>
