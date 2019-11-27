@@ -22,8 +22,15 @@ Route::get('/', function () {
 
 Route::get('/about', 'PageController@about');
 
+Route::get('/articles/create', 'ArticleController@create')
+  ->name('articles.create');
+
+Route::post('/articles', 'ArticleController@store')
+  ->name('articles.store');
+
 // Название сущности в URL во множественном числе, контроллер в единственном
 Route::get('/articles', 'ArticleController@index')
   ->name('articles.index'); // имя маршрута, нужно для того чтобы не создавать ссылки руками
+
 Route::get('/articles/{id}', 'ArticleController@show')
   ->name('articles.show');

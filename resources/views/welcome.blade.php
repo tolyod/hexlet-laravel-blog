@@ -9,6 +9,7 @@
         <!-- BEGIN (write your solution here) -->
         <a href="/about">About</a>
         <a href="{{ route('articles.index', null, false) }}">Articles</a>
+        <a href="{{ route('articles.create', null, false) }}">new Article</a>
         <!-- END -->
     </body>
 </html>

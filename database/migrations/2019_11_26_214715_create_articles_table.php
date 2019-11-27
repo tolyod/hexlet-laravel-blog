@@ -17,7 +17,7 @@ class CreateArticlesTable extends Migration
             $table->bigIncrements('id');
             $table->string('name'); // название статьи
             $table->text('body'); // тело статьи
-            $table->integer('views_count');
+            $table->integer('views_count')->nullable();
             $table->timestamps();
         });
     }
