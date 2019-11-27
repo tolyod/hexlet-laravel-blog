@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Article;
+use App\Http\Requests\StoreArticle;
 
 class ArticleController extends Controller
 {
@@ -51,18 +52,19 @@ class ArticleController extends Controller
             ->route('articles.index');
     }
 
-    public function store(Request $request)
+    public function store(StoreArticle $request)
     {
         // Проверка введенных данных
         // Если будут ошибки, то возникнет исключение
-        $this->validate($request, [
-            'name' => 'required|unique:articles',
-            'body' => 'required|min:1000',
-        ]);
+        /* $this->validate($request, [ */
+        /*     'name' => 'required|unique:articles', */
+        /*     'body' => 'required|min:1000', */
+        /* ]); */
+        $validated = $request->validated();
 
         $article = new Article();
         // Заполнение статьи данными из формы
-        $article->fill($request->all());
+        $article->fill($validated); //$request->all());
         // При ошибках сохранения возникнет исключение
         $article->save();
 
