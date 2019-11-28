@@ -11,7 +11,10 @@
     </head>
     <body>
         <div>
-            <a href="{{ route('articles.index') }}">Статьи</a>
+            <small>
+                <a href="{{ route('articles.index') }}">Статьи</a>
+                <a href="{{ route('articles.create', null, false) }}">new Article</a>
+            </small>
         </div>
         <hr>
         <div class="container mt-4">
