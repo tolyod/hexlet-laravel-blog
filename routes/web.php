@@ -41,3 +41,6 @@ Route::get('/articles/{id}/edit', 'ArticleController@edit')
 
 Route::get('/articles/{id}', 'ArticleController@show')
   ->name('articles.show');
+
+Route::delete('/articles/{id}', 'ArticleController@destroy')
+  ->name('articles.destroy');

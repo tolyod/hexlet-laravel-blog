@@ -15,6 +15,9 @@
                 <a href="{{ route('articles.edit', $article ) }}">
                    edit
                 </a>
+                <a href="{{ route('articles.destroy', $article) }}" data-confirm="Вы уверены?" data-method="delete" rel="nofollow">
+                    delete
+                </a>
             </small>
         </p>
         <div>{{Str::limit($article->body, 200)}}</div>
