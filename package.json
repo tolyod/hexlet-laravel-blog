@@ -20,7 +20,10 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "bootstrap": "^4.4.0",
+        "bootstrap-sass": "^3.4.1",
         "jquery": "^3.4.1",
-        "jquery-ujs": "^1.2.2"
+        "jquery-ujs": "^1.2.2",
+        "popper.js": "^1.16.0"
     }
 }
